@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir y ejecutar K-Means</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Subir el archivo CSV y configurar K-Means</h1>
+        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+            <label for="csvfile">Selecciona el archivo CSV:</label>
+            <input type="file" id="csvfile" name="csvfile" accept=".csv" required>
+            
+            <label for="clusters">Número de Clusters (K):</label>
+            <input type="number" id="clusters" name="clusters" min="1" value="3" required>
+            
+            <label for="iterations">Máximo de Iteraciones:</label>
+            <input type="number" id="iterations" name="iterations" min="1" value="100" required>
+            
+            <button type="submit">Subir y ejecutar K-Means</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
